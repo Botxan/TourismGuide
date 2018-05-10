@@ -1,0 +1,325 @@
+* {
+	margin: 0;
+	padding: 0;
+  font-family: 'Gugi', cursive;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+#mainHeader {
+  background-color: #202020; 
+}
+
+#header {
+	margin-top: 15vh;;
+}
+
+
+/*---------------------Loader 1-----------*/
+
+#loader1 {
+  display: flex;
+  margin-top: 60px;
+}
+
+#loader1 div {
+  height: 150px;
+  width: 8px;
+  background: #fff;
+  margin: 3px;
+  animation: wave 1s linear infinite;
+  margin-left: auto;
+}
+
+#loader1 div:nth-child(11) {
+  animation-delay: 0.1s;
+}
+
+#loader1 div:nth-child(10) {
+  animation-delay: 0.2s;
+}
+#loader1 div:nth-child(9) {
+  animation-delay: 0.3s;
+}
+#loader1 div:nth-child(8) {
+  animation-delay: 0.4s;
+}
+#loader1 div:nth-child(7) {
+  animation-delay: 0.5s;
+}
+#loader1 div:nth-child(6) {
+  animation-delay: 0.6s;
+}
+#loader1 div:nth-child(5) {
+  animation-delay: 0.7s;
+}
+#loader1 div:nth-child(4) {
+  animation-delay: 0.8s;
+}
+#loader1 div:nth-child(3) {
+  animation-delay: 0.9s;
+}
+#loader1 div:nth-child(2) {
+  animation-delay: 1s;
+}
+
+#loader1 div:nth-child(1) {
+  animation-delay: 1.1s;
+}
+
+/*-----------------loader 2--------------------------*/
+
+
+#loader2 {
+  display: flex;
+  margin-top: 60px;
+}
+
+#loader2 div {
+  height: 150px;
+  width: 8px;
+  background: #fff;
+  margin-left: 3px; 
+  margin-right: auto;
+  animation: wave 1s linear infinite;
+ 
+}
+
+#loader2 div:nth-child(1) {
+  animation-delay: 0.1s;
+}
+
+#loader2 div:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+#loader2 div:nth-child(3) {
+  animation-delay: 0.3s;
+}
+#loader2 div:nth-child(4) {
+  animation-delay: 0.4s;
+}
+#loader2 div:nth-child(5) {
+  animation-delay: 0.5s;
+}
+#loader2 div:nth-child(6) {
+  animation-delay: 0.6s;
+}
+#loader2 div:nth-child(7) {
+  animation-delay: 0.7s;
+}
+#loader2 div:nth-child(8) {
+  animation-delay: 0.8s;
+}
+#loader2 div:nth-child(9) {
+  animation-delay: 0.9s;
+}
+#loader2 div:nth-child(10) {
+  animation-delay: 1s;
+}
+#loader2 div:nth-child(11) {
+  animation-delay: 1.1s;
+}
+
+/*--------------------------------------------------------------*/
+@keyframes wave {
+	0% { transform: rotateX(180deg); }
+	100% { transform: rotateX(0deg); }
+}
+
+#title h1 {
+	font-size: 8em;
+	color: white;
+}
+
+#title p {
+	font-size: 4em;
+	color: white;
+}
+
+ /*--------------Nav--------------------*/
+
+ #nav {
+  margin-top: 20vh;
+  color: white;
+}
+
+#nav > div {
+  padding: 40px 0 40px 0;
+}
+
+.navSection {
+  border:0px solid white;
+  transition: border .1s;
+  border-radius: 10px;
+  border-top: 1px solid white
+
+}
+
+.navSection:hover {
+  border: 3px solid white;
+  box-shadow: 4px 4px 0px 0px;
+  cursor: pointer;
+}
+
+.navSection > p {
+  font-size: 2em;
+}
+
+/*------------About Us Section---------------------*/
+
+#aboutUsIn {
+  background-color: #E0E0E0;
+  box-shadow: 5px 5px 8px;
+  padding: 10px 0px 50px 0px;
+}
+
+#aboutUs > div > div > div > h2 {
+  font-size: 6em;
+  color:black;
+  font-family: 'Roboto', sans-serif;
+  font-weight: bold;
+}
+
+#aboutUs > div > div > div > p {
+  font-size: 1.5em;
+  font-family: 'Roboto', sans-serif;
+  width: 65%;
+  margin: 0 auto;
+}
+
+#aboutUsFirst {
+  margin: 100px 0 100px 0;
+}
+
+.aboutUsButton {
+  background-color: transparent;
+  color:  black;
+  border: 1px solid black;
+  font-family: 'Roboto', sans-serif;
+  border-radius:50px;
+  font-size:1.2em;
+  padding: 10px 30px 10px 30px;
+  transition: background-color 0.3s;
+}
+
+.aboutUsButton:hover {
+  background-color: black;
+  color: white;
+  border:1px solid black;
+}
+
+div#aboutUsIn > div img {
+  width: 100%;
+  max-width: 50%;
+}
+
+/*About us end-------------------------*/
+
+#leaflet {
+  padding: 10vh 0 10vh 0;
+}
+
+#leafletLogo {
+  width: 100%;
+  margin: 0 10vh 0 7vh;
+}
+
+div#leaflet > div h2{
+  font-size: 6em;
+  color:black;
+  font-family: 'Roboto', sans-serif;
+  font-weight: bold;
+  text-align: center;
+  vertical-align: center;
+}
+
+div#leaflet > div p {
+  font-size: 1.5em;
+  font-family: 'Roboto', sans-serif;
+  width: 65%;
+  margin:0 auto;
+}
+
+div#leaflet > div button {
+  background-color: transparent;
+  color:  black;
+  border: 1px solid black;
+  font-family: 'Roboto', sans-serif;
+  border-radius:50px;
+  font-size:1.2em;
+  padding: 10px 30px 10px 30px;
+  transition: background-color 0.3s;
+}
+
+div#leaflet > div button:hover {
+  background-color: black;
+  color: white;
+  border:1px solid black;
+}
+
+/*Google maps and Leaflet text styles*/
+span {
+  font-family: 'Roboto', sans-serif;
+}
+.span1 {
+  color: blue;
+}
+
+.span2 {
+  color: red;
+}
+
+.span3 {
+  color: yellow; 
+}
+
+.span4 {
+  color: blue; 
+}
+
+.span5 {
+  color: green;
+}
+
+.span6 {
+  color: red;
+}
+
+.span7 {
+  color: grey;
+}
+
+.span8 {
+  color: green;
+}
+
+#leaflet > div > div > div {
+  margin-top: 3vh;
+}
+
+
+
+#mapBlock {
+  margin-top: 5vh;
+}
+
+#mapLegend > div > h3, label {
+  font-family: 'Roboto', sans-serif;
+  font-weight: normal;
+}
+
+.allIcons {
+  display:none;
+}
+
+
+
+
+
+
+
+
+

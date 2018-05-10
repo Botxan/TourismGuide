@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>MAPAGE</title>
+	<meta charset="utf-8">
+
+  	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.2/dist/leaflet.css" />
+  	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  	<link rel="stylesheet" href="aos-master/dist/aos.css">
+  	<link rel="stylesheet" type="text/css" href="css/styles.css">
+  	<link href="https://fonts.googleapis.com/css?family=Gugi|Roboto:400" rel="stylesheet">
+  	<link rel="stylesheet" href="jquery-ui-1.12.1/jquery-ui.min.css">
+
+  	 <style>
+ 	 	#map {
+ 	 	margin: auto;
+  		width: 95%;
+  		height:90vh;
+  		border-left: 2px solid #004C99;
+  		border-right: 2px solid  #004C99;
+  	}
+	 </style>
+</head>
+<body>
+	<div id="mainHeader" class="container-fluid">
+		<div id="header" class="row">
+				<div id="loader1" data-aos="fade-right" data-aos-offset="200" data-aos-easing="ease-in-sine" data-aos-duration="500" id="aboutUsFirst"  class="col-sm-4">
+	  				<div></div>
+	  				<div></div>
+	  				<div></div>
+	  				<div></div>
+	  				<div></div>
+	  				<div></div>
+	  				<div></div>
+	  				<div></div>
+	  				<div></div> 
+	  				<div></div>
+	  				<div></div>
+				</div>
+
+				<div id="title" data-aos="flip-up" data-aos-offset="200" data-aos-easing="ease-in-sine" data-aos-duration="500" id="aboutUsFirst"  class="col-sm-4 text-center">
+					<h1 style="border-bottom: 3px solid white; padding: 10px;">MAPAGE</h1>
+					<p style=";">Create your own world</p>
+				</div>
+
+				<div id="loader2" data-aos="fade-left" data-aos-offset="200" data-aos-easing="ease-in-sine" data-aos-duration="500" id="aboutUsFirst"  class="col-sm-4">
+	  				<div></div>
+	  				<div></div>
+	  				<div></div>
+	  				<div></div>
+	  				<div></div>
+	  				<div></div>
+	  				<div></div>
+	  				<div></div>
+	  				<div></div> 
+	  				<div></div>
+	  				<div></div> 
+				</div>
+		</div>
+
+		<div id="nav" data-aos="fade-up" data-aos-offset="200" data-aos-easing="ease-in-sine" data-aos-duration="500" id="aboutUsFirst"  class="row text-center">
+			<div class="col-sm-2"></div>
+			<div class="col-sm-2 navSection">
+				<i class="fas fa-home fa-10x"></i>
+				<br><br>
+				<p>HOME</p>
+			</div>		
+
+			<div class="col-sm-2 navSection">
+				<i class="fas fa-question fa-10x"></i>
+				<br><br>
+				<p>ABOUT US</p>
+			</div>
+
+			<div class="col-sm-2 navSection">
+				<i class="far fa-map fa-10x"></i>
+				<br><br>
+				<p>LEAFLET</p>
+			</div>
+
+			<div class="col-sm-2 navSection">
+				<i class="fas fa-street-view fa-10x"></i>
+				<br><br>
+				<p>OUR PROJECT</p>
+			</div>
+			<div class="col-sm-2"></div>
+		</div>
+		<br><br><br><br>
+	</div>
+		<div id="aboutUs">
+			<div class="container-fluid">
+				<div id="aboutUsIn" class="row">
+					<div data-aos="fade-right" data-aos-offset="200" data-aos-easing="ease-in-sine" data-aos-duration="500" id="aboutUsFirst" class="col-sm-7 text-center">
+						<h2>About us</h2>
+						<br>
+						<p>We are three students of IES Zubiri Manteo, studying a higher level of Network System Administrations. In this case, we are working on a project about different Map API's. So we started working with Google Maps and Leaflet.</p>
+						<br>	
+						<button type="button" class="btn btn-primary btn-lg aboutUsButton">Twitter <i class="fab fa-twitter"></i></button>
+						<button type="button" class="btn btn-primary btn-lg aboutUsButton">Facebook <i class="fab fa-facebook-f"></i></button>						
+					</div>
+					<div data-aos="fade-right" data-aos-offset="200" data-aos-easing="ease-in-sine" data-aos-duration="500" id="aboutUsImg" class="col-sm-5 text-left">
+						<br><br>
+						<img src="images/aboutUs.png">
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<div id="leaflet" data-aos="fade-right" data-aos-offset="200" data-aos-easing="ease-in-sine" data-aos-duration="500" id="aboutUsFirst"  class="container-fluid">
+			<div class="row text-center">
+				<div class="col-sm-5 text-center">
+					<img id="leafletLogo" src="images/leaflet.png">
+				</div>
+				<div class="col-sm-7">
+					<h2>What is Leaflet?</h2>
+					<p>Leaflet is the leading open-source JavaScript library for mobile-friendly interactive maps. Weighing just about 38 KB of JS, it has all the mapping features most developers ever need.</p>
+					<br>
+					<button class="btn btn-primary" data-toggle="collapse" data-target="#comparationInfo"><span class="span1">G</span><span class="span2">o</span><span class="span3">o</span><span class="span4">g</span><span class="span5">l</span><span class="span6">e</span> <span class="span7">Maps</span> or <span class="span8">Leaflet</span>? <i class="fas fa-arrow-down"></i></button>
+
+					<button class="btn btn-primary" data-toggle="collapse" data-target="#moreLeaflet">More about <span class="span8">Leaflet </span><i class="fas fa-arrow-down"></i></button>
+
+					<div id="comparationInfo" class="collapse text-left">
+						<p>There are some differences between this 2 libraries that we have to consider before starting our project. Visit <a href="https://www.codementor.io/victorgerardtemprano/google-maps-api-or-leaflet--what-s-best-for-your-project-faaev60vm">this link</a> to get more information:</p>
+
+					</div>
+					<div id="moreLeaflet" class="collapse">
+						<p>You can visit the <a href="http://leafletjs.com/">official page</a> to get all information about Leaflet.</p>
+					</div>
+				</div>
+
+			</div>
+		</div>
+
+		<div id="mapBlock" class="container">
+			<div class="form-group container">
+				<label for="selectCity">Choose the city</label>
+				<select class="form-control">
+					<option selected>Donostia</option>
+					<option>Paris</option>
+					<option>New York</option>
+				</select>
+				<div id="mapLegend" class="row">
+					<div class="col-sm-2">
+						<h3>CULTURE</h3>
+						<hr>
+						<label for="Cathedrals">Cathedrals</label>
+						<input id="Cathedrals" type="checkbox" class="form-check-input" name="Cathedrals">
+						<br>
+						<label for="Monuments">Monuments</label>
+						<input id="Monuments" type="checkbox" name="Monuments">
+						<br>
+						<label for="Museums">Museums</label>
+						<input id="Museums" type="checkbox" name="Museums">
+					</div>
+					
+					<div class="col-sm-2">
+						<h3>FOOD</h3>
+						<hr>
+						<label for="FastFood">Fast food</label>
+						<input id="FastFood" type="checkbox" name="FastFood">
+						<br>
+
+						<label for="Restaurants">Restaurants</label>
+						<input id="Restaurants" type="checkbox" name="Restaurants">
+						<br>
+
+						<label for="Pubs">Pubs</label>
+						<input id="Pubs" type="checkbox" name="Pubs">
+					</div>
+
+					<div class="col-sm-2">
+						<h3>LEISURE</h3>
+						<hr>
+						<label for="Casinos">Casinos</label>
+						<input id="Casinos" type="checkbox" name="Casinos">
+						<br>
+
+						<label for="Cinemas">Cinemas</label>
+						<input id="Cinemas" type="checkbox" name="Cinemas">
+						<br>
+						
+						<label for="Theaters">Theaters</label>
+						<input id="Theaters" type="checkbox" name="Theaters">
+					</div>
+
+					<div class="col-sm-2">
+						<h3>LODGING</h3>
+						<hr>
+						<label for="Hotels">Hotels</label>
+						<input id="Hotels" type="checkbox" name="Hotels">
+						<br>
+
+						<label for="Pensions">Pensions</label>
+						<input id="Pensions" type="checkbox" name="Pensions">
+					</div>
+
+					<div class="col-sm-2">
+						<h3>NATURAL</h3>
+						<hr>
+						<label for="Beaches">Beaches</label>
+						<input id="Beaches" type="checkbox" name="Beaches">
+						<br>
+
+						<label for="Caves">Caves</label>
+						<input id="Caves" type="checkbox" name="Caves">
+						<br>
+
+						<label for="Lakes">Lakes</label>
+						<input id="Lakes" type="checkbox" name="Lakes">
+						<br>
+
+						<label for="Mountains">Mountains</label>
+						<input id="Mountains" type="checkbox" name="Mountains">
+						<br>
+
+						<label for="Naturalparks">Natural parks</label>
+						<input id="Naturalparks" type="checkbox" name="Naturalparks">
+					</div>
+
+					<div class="col-sm-2">
+						<h3>SPORTS</h3>
+						<hr>
+						<label for="Sportcenters">Sport centers</label>
+						<input id="Sportcenters" type="checkbox" name="Sportcenters">
+						<br>
+						<label for="Stadiums">Stadiums</label>
+						<input id="Stadiums" type="checkbox" name="Stadiums">
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="map" data-aos="fade-right" data-aos-offset="200" data-aos-easing="ease-in-sine" data-aos-duration="500"></div>
+		<br>
+		<div id="footer"></div>
+
+	<script src="https://unpkg.com/leaflet@1.0.2/dist/leaflet.js"></script>
+	<script defer src="https://use.fontawesome.com/releases/v5.0.10/js/all.js" integrity="sha384-slN8GvtUJGnv6ca26v8EzVaR9DC58QEwsIk9q1QXdCU8Yu8ck/tL/5szYlBbqmS+" crossorigin="anonymous"></script>
+	<script src="aos-master/dist/aos.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<script src="jquery-ui-1.12.1/external/jquery/jquery.js"></script>
+	<script src="jquery-ui-1.12.1/jquery-ui.min.js"></script>
+	<script>
+		AOS.init();
+	</script>
+	<script>
+ 		// Set the initial position of the map
+		var map = L.map('map').
+		setView([43.327441, -1.970837], 
+		14);	
+
+		// Other scripts-------------------------------------------------------
+
+
+		$( function() {
+			$('#map').resizable({
+				handles: 'e, w'
+			});
+		});
+		
+		$( ':checkbox' ).change( function () {
+
+			$('.' + $(this).attr('id')).toggle('easing');
+		})
+
+	// ------On click, show the latitude and longitude---------
+		// map.on('click', function(e) {
+  			// alert("Lat, Lon : " + e.latlng.lat + ", " + e.latlng.lng)
+		// });
+
+		// --------------------------------------------------------------------
+
+		var mountains = [
+			{
+				lat:43.32503816687905,
+				ln:-1.9895124435424807,
+				data: "<p>Urgul mountain</p>"
+			},
+			{
+				lat:43.32162243468214,
+				ln:-1.999340057373047,
+				data: "<p>Santa Clara island</p>"
+			},
+			{
+				lat:43.32987167048922,
+				ln:-1.9584001600742342,
+				data: "<p>Ulia mountains</p>"
+			}
+
+
+		];
+
+		mountains.forEach(function(element) {
+			var myIcon = L.icon({
+			    iconUrl: 'icons/leafletGreen.png',
+			    shadowUrl: 'icons/shadows/leafletShadow.png',
+			    iconSize:     [38, 95],
+        		shadowSize:   [50, 64],
+        		iconAnchor:   [22, 94],
+        		shadowAnchor: [4, 62],
+        		popupAnchor:  [-3, -76],
+			    className: 'Mountains allIcons'
+			});
+
+  			L.marker([element.lat, element.ln], {icon:myIcon}).addTo(map).bindPopup(element.data)
+		});
+
+
+		//------------------------------------------------------------------------------------------------------
+
+		
+		// Add map layer
+		L.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+		    attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="http://cloudmade.com">CloudMade</a>',
+		    maxZoom: 20
+		}).addTo(map);
+
+		L.control.scale().addTo(map);
+</script>
+</body>
+</html>
