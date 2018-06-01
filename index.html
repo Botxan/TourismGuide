@@ -34,7 +34,7 @@
 	  				<div></div>
 	  				<div></div>
 	  				<div></div>
-	  				<div></div> 
+	  				<div></div>
 	  				<div></div>
 	  				<div></div>
 				</div>
@@ -53,9 +53,9 @@
 	  				<div></div>
 	  				<div></div>
 	  				<div></div>
-	  				<div></div> 
 	  				<div></div>
-	  				<div></div> 
+	  				<div></div>
+	  				<div></div>
 				</div>
 		</div>
 
@@ -65,7 +65,7 @@
 				<i class="fas fa-home fa-10x"></i>
 				<br><br>
 				<p>HOME</p>
-			</div>		
+			</div>
 
 			<div class="col-sm-2 navSection">
 				<i class="fas fa-question fa-10x"></i>
@@ -95,9 +95,9 @@
 						<h2>About us</h2>
 						<br>
 						<p>We are three students of IES Zubiri Manteo, studying a higher level of Network System Administrations. In this case, we are working on a project about different Map API's. So we started working with Google Maps and Leaflet.</p>
-						<br>	
+						<br>
 						<button type="button" class="btn btn-primary btn-lg aboutUsButton">Twitter <i class="fab fa-twitter"></i></button>
-						<button type="button" class="btn btn-primary btn-lg aboutUsButton">Facebook <i class="fab fa-facebook-f"></i></button>						
+						<button type="button" class="btn btn-primary btn-lg aboutUsButton">Facebook <i class="fab fa-facebook-f"></i></button>
 					</div>
 					<div data-aos="fade-right" data-aos-offset="200" data-aos-easing="ease-in-sine" data-aos-duration="500" id="aboutUsImg" class="col-sm-5 text-left">
 						<br><br>
@@ -106,7 +106,7 @@
 				</div>
 			</div>
 		</div>
-		
+
 		<div id="leaflet" data-aos="fade-right" data-aos-offset="200" data-aos-easing="ease-in-sine" data-aos-duration="500" id="aboutUsFirst"  class="container-fluid">
 			<div class="row text-center">
 				<div class="col-sm-5 text-center">
@@ -153,7 +153,7 @@
 						<label for="Museums">Museums</label>
 						<input id="Museums" type="checkbox" name="Museums">
 					</div>
-					
+
 					<div class="col-sm-2">
 						<h3>FOOD</h3>
 						<hr>
@@ -179,7 +179,7 @@
 						<label for="Cinemas">Cinemas</label>
 						<input id="Cinemas" type="checkbox" name="Cinemas">
 						<br>
-						
+
 						<label for="Theaters">Theaters</label>
 						<input id="Theaters" type="checkbox" name="Theaters">
 					</div>
@@ -247,29 +247,76 @@
 	<script>
  		// Set the initial position of the map
 		var map = L.map('map').
-		setView([43.327441, -1.970837], 
-		14);	
+		setView([43.327441, -1.970837],
+		10);
 
 		// Other scripts-------------------------------------------------------
 
 
 		$( function() {
 			$('#map').resizable({
-				handles: 'e, w'
+				handles: 'e'
 			});
 		});
-		
+		// When any chekbox status change, start function. This function is going to take the id (att('id') of the clicked checkbox ($(this)) and is going to toggle it)
+
 		$( ':checkbox' ).change( function () {
 
 			$('.' + $(this).attr('id')).toggle('easing');
+			console.log($(this).attr('id'));
 		})
 
 	// ------On click, show the latitude and longitude---------
-		// map.on('click', function(e) {
-  			// alert("Lat, Lon : " + e.latlng.lat + ", " + e.latlng.lng)
-		// });
+		map.on('click', function(e) {
+  			alert("Lat, Lon : " + e.latlng.lat + ", " + e.latlng.lng)
+		});
 
 		// --------------------------------------------------------------------
+
+		// Define the markers (lat ln and popup data) 
+		var beaches = [
+			{
+				lat:43.31675339160871,
+				ln:-2.002227790653706,
+				data: "<p>Ondarreta beach</p>"
+			},
+			{
+				lat:43.31645676277946,
+				ln:-1.9883017614483836,
+				data: "<p>Kontxa beach</p>"
+			},
+			{
+				lat:43.3261667017096,
+				ln:-1.9753413274884226,
+				data: "<p>Zurriola beach</p>"
+			},
+			{
+				lat:43.31641553711213,
+				ln:-1.9941721111536028,
+				data: "<p>Example beach</p>"
+			}
+		];
+
+		var cathedrals = [
+			{
+				lat:43.31670375028956,
+				ln:-1.981568578630686,
+				data: "<p>Buen Pastor church</p>"
+			},
+			{
+				lat:43.32378588818939,
+				ln:-1.9746047258377077,
+				data: "<p>San ignacio parish</p>"
+			}
+		];
+
+		var monuments = [
+			{
+				lat:43.322970249836786,
+				ln:-1.9829277880489828,
+				data: "<p>Monument to the drummer</p>"
+			}
+		];
 
 		var mountains = [
 			{
@@ -287,36 +334,102 @@
 				ln:-1.9584001600742342,
 				data: "<p>Ulia mountains</p>"
 			}
-
-
 		];
 
-		mountains.forEach(function(element) {
-			var myIcon = L.icon({
-			    iconUrl: 'icons/leafletGreen.png',
-			    shadowUrl: 'icons/shadows/leafletShadow.png',
-			    iconSize:     [38, 95],
-        		shadowSize:   [50, 64],
-        		iconAnchor:   [22, 94],
-        		shadowAnchor: [4, 62],
-        		popupAnchor:  [-3, -76],
-			    className: 'Mountains allIcons'
-			});
+		// Customize icons and add all icon positions with icons:variable(JSON objects above) and custom class for each of them (to use  function below).
+		var all_icons = [
+			{
+				type : "mountains",
+				iconUrl : 'iconss/leafletGreen.png',
+				shadowUrl : 'iconss/shadows/leafletShadow.png',
+				iconSize : [38, 95],
+				shadowSize : [50, 64],
+				iconAnchor : [22, 94],
+				shadowAnchor : [4, 62],
+				popupAnchor : [-3, -76],
+				className : 'Mountains allIcons',
+				icons : mountains
+			},
+			{
+				type : "beaches",
+				iconUrl : 'iconss/leafletYellow.png',
+				shadowUrl : 'iconss/shadows/leafletShadow.png',
+				iconSize : [38, 95],
+				shadowSize : [50, 64],
+				iconAnchor : [22, 94],
+				shadowAnchor : [4, 62],
+				popupAnchor : [-3, -76],
+				className : 'Beaches allIcons',
+				icons : beaches
+			},
+			{
+				type: "cathedrals",
+				iconUrl : 'iconss/cathedral.png',
+				shadowUrl: '',
+				iconSize : [80, 85],
+				shadowSize : [50, 64],
+				iconAnchor : [22, 94],
+				shadowAnchor : [4, 62],
+				popupAnchor : [18.5, -76],
+				className : 'Cathedrals allIcons',
+				icons: cathedrals
+			},
+			{
+				type: "monuments",
+				iconUrl : 'iconss/monuments.png',
+				shadowUrl: '',
+				iconSize : [55, 60],
+				shadowSize : [50, 64],
+				iconAnchor : [22, 94],
+				shadowAnchor : [4, 62],
+				popupAnchor : [-3, -76],
+				className : 'Monuments allIcons',
+				icons: monuments
+			}
+		]
 
-  			L.marker([element.lat, element.ln], {icon:myIcon}).addTo(map).bindPopup(element.data)
+		//mountains.forEach(function(element) {
+		all_icons.forEach(function(type) {
+			// Spread all the attributes of custom icon depending to the type
+			var iconUrl = type.iconUrl;
+			var shadowUrl = type.shadowUrl;
+			var iconSize = type.iconSize;
+			var shadowSize = type.shadowSize;
+			var iconAnchor = type.iconAnchor;
+			var shadowAnchor = type.shadowAnchor;
+			var popupAnchor = type.popupAnchor;
+			var className = type.className;
+
+			type.icons.forEach(function(element) {
+				// Go to the type, for example "mountain". Into the object, go to the icons attribute, which is mountain. Mountain is a variable than is a bunch of objects with lat, ln, and data. And for each of them, add the custom selected icon
+				var myIcon = L.icon({
+					iconUrl: iconUrl,
+					shadowUrl: shadowUrl,
+					iconSize: iconSize,
+					shadowSize: shadowSize,
+					iconAnchor: iconAnchor,
+					shadowAnchor: shadowAnchor,
+					popupAnchor: popupAnchor,
+					className: className
+				});
+
+				L.marker([element.lat, element.ln], {icon:myIcon}).addTo(map).bindPopup(element.data)
+			});
 		});
 
 
 		//------------------------------------------------------------------------------------------------------
 
-		
-		// Add map layer
-		L.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-		    attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="http://cloudmade.com">CloudMade</a>',
-		    maxZoom: 20
-		}).addTo(map);
 
-		L.control.scale().addTo(map);
+		// Add map layer
+	L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}', {
+    attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
+    maxZoom: 18,
+    id: 'mapbox.streets',
+    accessToken: 'pk.eyJ1IjoiYm90eGFuIiwiYSI6ImNqaDdnaWF6dDA2ZjgydnM4NXo2Y284cnEifQ.ixzzrTyXTW5EEhQawck-Mw'
+}).addTo(map);
+
+		
 </script>
 </body>
 </html>

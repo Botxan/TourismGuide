@@ -8,6 +8,30 @@ body {
   overflow-x: hidden;
 }
 
+@media only screen and (max-width: 1500px) {
+  div#loader1 > div , div#loader2 > div {
+    height: 90px; 
+  }
+
+  div#title h1 {
+    font-size: 5em;
+  }
+
+  div#title p {
+    font-size: 2em;
+  }
+}
+
+@media only screen and (max-width: 1048px) {
+  div#title h1 {
+    font-size: 3em;
+  }
+
+  div#title {
+    font-size: 1em;
+  }
+}
+
 #mainHeader {
   background-color: #202020; 
 }
@@ -81,10 +105,10 @@ body {
   height: 150px;
   width: 8px;
   background: #fff;
-  margin-left: 3px; 
+  margin-left: 3px;
   margin-right: auto;
   animation: wave 1s linear infinite;
- 
+
 }
 
 #loader2 div:nth-child(1) {
@@ -273,11 +297,11 @@ span {
 }
 
 .span3 {
-  color: yellow; 
+  color: yellow;
 }
 
 .span4 {
-  color: blue; 
+  color: blue;
 }
 
 .span5 {
@@ -314,12 +338,3 @@ span {
 .allIcons {
   display:none;
 }
-
-
-
-
-
-
-
-
-
