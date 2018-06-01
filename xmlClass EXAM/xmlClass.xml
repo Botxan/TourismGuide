@@ -1,0 +1,83 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="xslClass.xsl"?>
+<classroom>
+  <classname>IS31 (English)</classname>
+  <classimg>images/class.png</classimg>
+  <student id="1">
+    <image>images/oihan.png</image>
+    <name>Oihan</name>
+    <surname>Irastorza</surname>
+    <age>18</age>
+    <email>oirastorzaca17asr@ikzubirimanteo.com</email>
+    <genre>Male</genre>
+    <project>
+    <projectname>Mapage</projectname>
+    <githublink>https://github.com/Botxan/TourismGuide.git</githublink>
+    </project>
+  </student>
+  
+  <student id="2">
+    <image>images/joseba.png</image>
+    <name>Joseba</name>
+    <surname>Mitxelena</surname>
+    <age>19</age>
+    <email>jmitxelenait17asr@ikzubirimanteo.com</email>
+    <genre>Male</genre>
+    <project>
+    <projectname>PokemonGO - Joseba</projectname>
+    <githublink>https://github.com/Avetch/Donostia-Map.git</githublink>
+    </project>
+  </student>
+  
+  <student id="3">
+    <image>images/eneko.png</image>
+    <name>Eneko</name>
+    <surname>García</surname>
+    <age>19</age>
+    <email>egarciaco17asr@ikzubirimanteo.com</email>
+    <genre>Male</genre>
+    <project>
+    <projectname>PokemonGO - Eneko </projectname>projectname>
+    <githublink>https://github.com/Avetch/Donostia-Map.git</githublink>
+    </project>
+  </student>
+  
+  <student id="4">
+    <image>images/iker.png</image>
+    <name>Iker</name>
+    <surname>Martinez</surname>
+    <age>19</age>
+    <email>imartinezla17asr@ikzubirimanteo.com</email>
+    <genre>Male</genre>
+    <project>
+    <projectname>Tourism Guide - Iker</projectname>
+    <githublink>https://github.com/imala11/tourism-guide.git</githublink>
+    </project>
+  </student>
+  
+  <student id="5">
+    <image>images/gorka.png</image>
+    <name>Gorka</name>
+    <surname>Gastesi</surname>
+    <age>19</age>
+    <email>egastesifi17asr@ikzubirimanteo.com</email>
+    <genre>Male</genre>
+    <project>
+    <projectname>Tourism Guide - Gorka</projectname>
+    <githublink>https://github.com/imala11/tourism-guide.git</githublink>
+    </project>
+  </student>
+  
+  <student id="6">
+    <image>images/luis.png</image>
+    <name>Luis Miguel</name>
+    <surname>Dosreis</surname>
+    <age>54</age>
+    <email>ldosreisca17asr@ikzubirimanteo.com</email>
+    <genre>Male</genre>
+    <project>
+    <projectname>Tourist Map</projectname>
+    <githublink>https://github.com/Tuxaju/Tourist-Map.git</githublink>
+    </project>
+  </student>
+</classroom>
